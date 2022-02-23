@@ -204,9 +204,9 @@ $customizer->add_fields( 'adev_topbar_options', [
 ### Example Sanitize Callback
 ```php
 function checkbox_sanitize_callback( $value ) {
-    $value = $value !== 'on' && $value !== 'off' ? 'off' : $value;
+    $sanitized = $value === 'on' ? 'on' : 'off';
 
-    return $value;
+    return $sanitized;
 }
 ```
 
